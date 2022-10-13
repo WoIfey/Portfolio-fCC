@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter Tight", sans-serif;
+}
+
+#display {
+  color: white;
+  padding: 20px 0 0 23px;
+  font-size: 2rem;
+}
+
+#calculator {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#area {
+  height: 400px;
+  width: 350px;
+  border-radius: 34px;
+  background: #6b77a6;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+#buttons {
+  padding: 0 0 24px 24px;
+}
+
+button {
+  background: #a4b4ca;
+  border: none;
+  width: 70px;
+  height: 70px;
+  border-radius: 14px;
+  color: #fff;
+  margin: 5px 3px 0 0;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #7994b6;
+}
+
+.zero {
+  width: 147px;
+}

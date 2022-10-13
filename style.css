@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
+  --home-background: linear-gradient(
+    90deg,
+    rgba(243, 108, 43, 1) 0%,
+    rgba(243, 169, 43, 1) 50%,
+    rgba(243, 185, 43, 1) 100%
+  );
+  --project-background: #f3752b;
+  --about-background: #cc6225;
+  --social-background: #bb622e;
+  --footer-background: #884f2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  color: white;
+  list-style: none;
+}
+
+/* navbar */
+
+#navbar {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  transition: top 0.5s;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 7rem 2rem 0rem 2rem;
+  opacity: 90%;
+  transition: 0.5s;
+}
+
+.nav-list a:hover {
+  text-shadow: 0 0 5px white;
+  opacity: 100%;
+}
+
+/* Sections */
+
+#welcome-section {
+  height: 100vh;
+  background: var(--home-background);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 200px;
+  font-size: 40px;
+}
+
+#projects {
+  background: var(--project-background);
+}
+
+#about {
+  background: var(--about-background);
+}
+
+#socials {
+  background: var(--social-background);
+}
+
+/* Headers */
+
+#projecth {
+  background: var(--home-background);
+  box-shadow: 0 10px 5px #df6a27;
+  font-size: 4rem;
+  padding: 7rem 0 4rem 0;
+  text-align: center;
+  transition: 0.5s;
+}
+
+#abouth {
+  background: var(--project-background);
+  box-shadow: 0 10px 5px #d86623;
+  font-size: 4rem;
+  padding: 7rem 0 4rem 0;
+  text-align: center;
+  transition: 0.5s;
+}
+
+#socialsh {
+  background: var(--about-background);
+  box-shadow: 0 10px 5px #d3682b;
+  font-size: 4rem;
+  padding: 7rem 0 4rem 0;
+  text-align: center;
+  transition: 0.5s;
+}
+
+footer {
+  background: var(--footer-background);
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+#projecth:hover,
+#abouth:hover,
+#socialsh:hover {
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+/* Projects */
+
+#project-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.project-tile {
+  background: #181201;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 3px rgb(0, 0, 0);
+  transition: 0.5s;
+}
+
+.project-tile:hover {
+  text-shadow: 0px 0px 3px white;
+  box-shadow: 0px 0px 15px white;
+  transition: 0.5s;
+}
+
+.project-tile p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0.5rem 1.5rem 0 1.5rem;
+}
+
+.projectimage {
+  object-fit: cover;
+  width: 100%;
+  height: calc(100% - 4rem);
+  border-radius: 0.5rem;
+}
+
+/* More button */
+
+#more {
+  background: #0e0f11;
+  padding: 1rem 3rem 1rem 3rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  margin-bottom: 3rem;
+  box-shadow: 0px 0px 5px black;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#more:hover {
+  text-shadow: 0px 0px 3px white;
+  box-shadow: 0px 0px 15px black;
+  transition: 0.5s;
+}
+.align {
+  text-align: center;
+}
+
+/* About section */
+
+#about-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-gap: 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+}
+
+/* Social section */
+
+#social-tiles {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-size: 4rem;
+  margin: 0 3rem 2rem 3rem;
+  transition: 0.5s;
+  letter-spacing: 0.2rem;
+}
+
+a:hover {
+  text-shadow: 0 0 10px white;
+  transition: 0.5s;
+}
+
+/* @media only screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+  }
+} */

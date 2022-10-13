@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Take a quick survey!</p>
+    <form id="survey-form" action="https://www.google.com">
+        <div>
+            <label id="name-label">
+                <p>Name</p>
+                <input id="name" placeholder="Enter your name" required>
+            </label>
+            <label id="email-label">
+                <p>Email</p>
+                <input id="email" type="email" placeholder="Enter your email" required>
+            </label>
+            <label id="number-label">
+                <p>Age</p>
+                <input id="number" type="number" min="13" max="100" placeholder="Age">
+            </label>
+        </div>
+        <div>
+            <p>Your current role!</p>
+            <select id="dropdown" name="role" required>
+                <option disabled selected value>Select your role</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+        </div>
+        <div>
+            <p>Does pineapple belong on pizza?</p>
+            <label><input id="submit1" class="button" type="radio" name="illegal" value="yes" required>Yes</label>
+            <label><input id="submit2" class="button" type="radio" name="illegal" value="no" required>No</label>
+        </div>
+        <div>
+            <p>Do you like any of these?</p>
+            <label><input id="submit3" class="button" type="checkbox" name="fruit1" value="Apple">Apple</label>
+            <label><input id="submit4" class="button" type="checkbox" name="fruit2" value="Banana">Banana</label>
+            <label><input id="submit4" class="button" type="checkbox" name="fruit3" value="Pear">Pear</label>
+        </div>
+        <div>
+            <label>
+                <p>Any comments?</p>
+                <textarea name="comment" placeholder="Enter your comment here..."></textarea>
+            </label>
+            <input id="submit" type="submit" value="Submit">
+        </div>
+
+    </form>
+</body>
+
+</html>
