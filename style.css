@@ -80,7 +80,7 @@
 
 #projecth {
   background: var(--home-background);
-  box-shadow: 0 10px 5px #df6a27;
+  box-shadow: 0 10px 10px #df6a27;
   font-size: 4rem;
   padding: 7rem 0 4rem 0;
   text-align: center;
@@ -89,7 +89,7 @@
 
 #abouth {
   background: var(--project-background);
-  box-shadow: 0 10px 5px #d86623;
+  box-shadow: 0 10px 10px #d86623;
   font-size: 4rem;
   padding: 7rem 0 4rem 0;
   text-align: center;
@@ -98,7 +98,7 @@
 
 #socialsh {
   background: var(--about-background);
-  box-shadow: 0 10px 5px #d3682b;
+  box-shadow: 0 10px 10px #d3682b;
   font-size: 4rem;
   padding: 7rem 0 4rem 0;
   text-align: center;
@@ -166,8 +166,6 @@ footer {
   padding: 0.5rem 2.5rem 0.5rem 2.5rem;
   font-size: 2rem;
   border-radius: 0.5rem;
-  display: inline-block;
-  margin-bottom: 3rem;
   box-shadow: 0px 0px 5px black;
   transition: 0.5s;
   cursor: pointer;
@@ -198,16 +196,16 @@ footer {
 /* Social section */
 
 #social-tiles {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
   align-items: center;
+  grid-gap: 2rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 i {
   font-size: 4rem;
-  margin: 0 3rem 2rem 3rem;
   transition: 0.5s;
   letter-spacing: 0.2rem;
 }
@@ -217,8 +215,24 @@ a:hover {
   transition: 0.5s;
 }
 
-/* @media only screen and (max-width: 600px) {
-  body {
-    height: 100vh;
+@media only screen and (max-width: 600px) {
+  #welcome-section {
+    padding-left: 50px;
   }
-} */
+  .nav-list a {
+    font-size: 1rem;
+    padding: 7rem 0.5rem 0rem 0.5rem;
+  }
+  #project-tiles {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 1rem;
+    max-width: 300px;
+  }
+  #about-tiles {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 300px;
+  }
+  i {
+    font-size: 2.5rem;
+  }
+}
