@@ -3,9 +3,15 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 500) {
-    document.getElementById("navbar").style.top = "-70px";
+  var nav = document.getElementById("navbar");
+
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 750) {
+    nav.style.top = "-60px";
+    nav.style.transition = "0.2s";
+    nav.style.opacity = "50%";
   } else {
-    document.getElementById("navbar").style.top = "0px";
+    nav.style.top = "0px";
+    nav.style.transition = "0.2s";
+    nav.style.opacity = "100%";
   }
 }

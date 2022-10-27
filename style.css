@@ -196,24 +196,83 @@ footer {
 /* Social section */
 
 #social-tiles {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   grid-gap: 2rem;
   padding-top: 8rem;
+  padding-bottom: 2rem;
+}
+
+#chat-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 8rem;
 }
 
-i {
+.links {
   font-size: 4rem;
   transition: 0.5s;
   letter-spacing: 0.2rem;
+  text-shadow: 0 0 5px white;
 }
 
-a:hover {
+.links:hover {
   text-shadow: 0 0 10px white;
   transition: 0.5s;
 }
+
+#chat {
+  width: 600px;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px black;
+}
+
+/* Tooltip for social icons */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .text {
+  visibility: hidden;
+  width: 100px;
+  background-color: rgb(212, 151, 60);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  bottom: 125%;
+  left: 62%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.tooltip .text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(212, 151, 60) transparent transparent transparent;
+}
+
+.tooltip:hover .text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.more {
+  display: none;
+}
+
+/* For mobile devices */
 
 @media only screen and (max-width: 600px) {
   #welcome-section {
