@@ -9,7 +9,11 @@
   );
   --project-background: #f3752b;
   --about-background: #cc6225;
-  --social-background: #bb622e;
+  --social-background: linear-gradient(
+    0deg,
+    rgba(255, 128, 59, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
   --footer-background: #884f2e;
 }
 
@@ -98,7 +102,7 @@
 
 #socialsh {
   background: var(--about-background);
-  box-shadow: 0 10px 10px #d3682b;
+  box-shadow: 0 10px 10px rgba(253, 187, 45, 1);
   font-size: 4rem;
   padding: 7rem 0 4rem 0;
   text-align: center;
@@ -223,11 +227,10 @@ footer {
   transition: 0.5s;
 }
 
-#chat {
+#cookie {
   width: 600px;
-  height: 300px;
+  height: 400px;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px black;
 }
 
 /* Tooltip for social icons */
@@ -266,6 +269,20 @@ footer {
 .tooltip:hover .text {
   visibility: visible;
   opacity: 1;
+}
+
+/* Footer */
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: medium;
+}
+
+/* Temporary */
+
+#more {
+  display: none;
 }
 
 /* For mobile devices */
